@@ -989,3 +989,227 @@ and restart your server
 /home/ubuntu/.rbenv/versions/2.7.0/bin/bundle:23:in `load'
 /home/ubuntu/.rbenv/versions/2.7.0/bin/bundle:23:in `<main>'
  DEBUG [34a5e923] 	(See full trace by running task with --trace)
+  INFO ---------------------------------------------------------------------------
+  INFO START 2020-08-12 18:29:15 +0100 cap production deploy
+  INFO ---------------------------------------------------------------------------
+ DEBUG [1a8ad9a8] Running [ -d $HOME/.rbenv/versions/2.7.0 ] as ubuntu@52.91.87.75
+ DEBUG [1a8ad9a8] Command: [ -d $HOME/.rbenv/versions/2.7.0 ]
+ DEBUG [1a8ad9a8] Finished in 1.528 seconds with exit status 0 (successful).
+ DEBUG [a1aa6371] Running /usr/bin/env which passenger as ubuntu@52.91.87.75
+ DEBUG [a1aa6371] Command: /usr/bin/env which passenger
+ DEBUG [a1aa6371] 	/usr/bin/passenger
+ DEBUG [a1aa6371] Finished in 0.279 seconds with exit status 0 (successful).
+  INFO [ae37f1ff] Running /usr/bin/env mkdir -p /tmp as ubuntu@52.91.87.75
+ DEBUG [ae37f1ff] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.7.0" ; /usr/bin/env mkdir -p /tmp )
+  INFO [ae37f1ff] Finished in 0.323 seconds with exit status 0 (successful).
+ DEBUG Uploading /tmp/git-ssh-qrCodeGenerator-production-akhilesh.sh 0.0%
+  INFO Uploading /tmp/git-ssh-qrCodeGenerator-production-akhilesh.sh 100.0%
+  INFO [94408fdf] Running /usr/bin/env chmod 700 /tmp/git-ssh-qrCodeGenerator-production-akhilesh.sh as ubuntu@52.91.87.75
+ DEBUG [94408fdf] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.7.0" ; /usr/bin/env chmod 700 /tmp/git-ssh-qrCodeGenerator-production-akhilesh.sh )
+  INFO [94408fdf] Finished in 0.282 seconds with exit status 0 (successful).
+  INFO [0dbfb271] Running /usr/bin/env git ls-remote git@github.com:Akhilesh4995/qrcodegenerator.git HEAD as ubuntu@52.91.87.75
+ DEBUG [0dbfb271] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.7.0" GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-qrCodeGenerator-production-akhilesh.sh" ; /usr/bin/env git ls-remote git@github.com:Akhilesh4995/qrcodegenerator.git HEAD )
+ DEBUG [0dbfb271] 	56f9c08f6cc912dda15e0f0b69d18c3bf3ee874f	HEAD
+  INFO [0dbfb271] Finished in 0.679 seconds with exit status 0 (successful).
+  INFO [e607ff72] Running /usr/bin/env mkdir -p /home/deploy/qrCodeGenerator/shared /home/deploy/qrCodeGenerator/releases as ubuntu@52.91.87.75
+ DEBUG [e607ff72] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.7.0" ; /usr/bin/env mkdir -p /home/deploy/qrCodeGenerator/shared /home/deploy/qrCodeGenerator/releases )
+  INFO [e607ff72] Finished in 0.280 seconds with exit status 0 (successful).
+  INFO [834ee7e7] Running /usr/bin/env mkdir -p /home/deploy/qrCodeGenerator/shared/log /home/deploy/qrCodeGenerator/shared/tmp/pids /home/deploy/qrCodeGenerator/shared/tmp/cache /home/deploy/qrCodeGenerator/shared/tmp/sockets /home/deploy/qrCodeGenerator/shared/vendor/bundle /home/deploy/qrCodeGenerator/shared/.bundle /home/deploy/qrCodeGenerator/shared/public/system /home/deploy/qrCodeGenerator/shared/public/uploads /home/deploy/qrCodeGenerator/shared/public/assets as ubuntu@52.91.87.75
+ DEBUG [834ee7e7] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.7.0" ; /usr/bin/env mkdir -p /home/deploy/qrCodeGenerator/shared/log /home/deploy/qrCodeGenerator/shared/tmp/pids /home/deploy/qrCodeGenerator/shared/tmp/cache /home/deploy/qrCodeGenerator/shared/tmp/sockets /home/deploy/qrCodeGenerator/shared/vendor/bundle /home/deploy/qrCodeGenerator/shared/.bundle /home/deploy/qrCodeGenerator/shared/public/system /home/deploy/qrCodeGenerator/shared/public/uploads /home/deploy/qrCodeGenerator/shared/public/assets )
+  INFO [834ee7e7] Finished in 0.321 seconds with exit status 0 (successful).
+ DEBUG [702ca3e8] Running [ -f /home/deploy/qrCodeGenerator/current/REVISION ] as ubuntu@52.91.87.75
+ DEBUG [702ca3e8] Command: [ -f /home/deploy/qrCodeGenerator/current/REVISION ]
+ DEBUG [702ca3e8] Finished in 0.280 seconds with exit status 1 (failed).
+ DEBUG [ada69730] Running [ -f /home/deploy/qrCodeGenerator/repo/HEAD ] as ubuntu@52.91.87.75
+ DEBUG [ada69730] Command: [ -f /home/deploy/qrCodeGenerator/repo/HEAD ]
+ DEBUG [ada69730] Finished in 0.328 seconds with exit status 0 (successful).
+  INFO The repository mirror is at /home/deploy/qrCodeGenerator/repo
+ DEBUG [ee223c02] Running if test ! -d /home/deploy/qrCodeGenerator/repo; then echo "Directory does not exist '/home/deploy/qrCodeGenerator/repo'" 1>&2; false; fi as ubuntu@52.91.87.75
+ DEBUG [ee223c02] Command: if test ! -d /home/deploy/qrCodeGenerator/repo; then echo "Directory does not exist '/home/deploy/qrCodeGenerator/repo'" 1>&2; false; fi
+ DEBUG [ee223c02] Finished in 0.284 seconds with exit status 0 (successful).
+  INFO [50ccbdab] Running /usr/bin/env git remote set-url origin git@github.com:Akhilesh4995/qrcodegenerator.git as ubuntu@52.91.87.75
+ DEBUG [50ccbdab] Command: cd /home/deploy/qrCodeGenerator/repo && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.7.0" GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-qrCodeGenerator-production-akhilesh.sh" ; /usr/bin/env git remote set-url origin git@github.com:Akhilesh4995/qrcodegenerator.git )
+  INFO [50ccbdab] Finished in 0.326 seconds with exit status 0 (successful).
+  INFO [335f852e] Running /usr/bin/env git remote update --prune as ubuntu@52.91.87.75
+ DEBUG [335f852e] Command: cd /home/deploy/qrCodeGenerator/repo && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.7.0" GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-qrCodeGenerator-production-akhilesh.sh" ; /usr/bin/env git remote update --prune )
+ DEBUG [335f852e] 	Fetching origin
+ DEBUG [335f852e] 	From github.com:Akhilesh4995/qrcodegenerator
+   a27ba19..56f9c08  master     -> master
+  INFO [335f852e] Finished in 0.626 seconds with exit status 0 (successful).
+ DEBUG [7bed7c5e] Running if test ! -d /home/deploy/qrCodeGenerator/repo; then echo "Directory does not exist '/home/deploy/qrCodeGenerator/repo'" 1>&2; false; fi as ubuntu@52.91.87.75
+ DEBUG [7bed7c5e] Command: if test ! -d /home/deploy/qrCodeGenerator/repo; then echo "Directory does not exist '/home/deploy/qrCodeGenerator/repo'" 1>&2; false; fi
+ DEBUG [7bed7c5e] Finished in 0.325 seconds with exit status 0 (successful).
+  INFO [8c4f25ef] Running /usr/bin/env mkdir -p /home/deploy/qrCodeGenerator/releases/20200812172920 as ubuntu@52.91.87.75
+ DEBUG [8c4f25ef] Command: cd /home/deploy/qrCodeGenerator/repo && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.7.0" GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-qrCodeGenerator-production-akhilesh.sh" ; /usr/bin/env mkdir -p /home/deploy/qrCodeGenerator/releases/20200812172920 )
+  INFO [8c4f25ef] Finished in 0.284 seconds with exit status 0 (successful).
+  INFO [7486e9e7] Running /usr/bin/env git archive master | /usr/bin/env tar -x -f - -C /home/deploy/qrCodeGenerator/releases/20200812172920 as ubuntu@52.91.87.75
+ DEBUG [7486e9e7] Command: cd /home/deploy/qrCodeGenerator/repo && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.7.0" GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-qrCodeGenerator-production-akhilesh.sh" ; /usr/bin/env git archive master | /usr/bin/env tar -x -f - -C /home/deploy/qrCodeGenerator/releases/20200812172920 )
+  INFO [7486e9e7] Finished in 1.130 seconds with exit status 0 (successful).
+ DEBUG [b022762f] Running if test ! -d /home/deploy/qrCodeGenerator/repo; then echo "Directory does not exist '/home/deploy/qrCodeGenerator/repo'" 1>&2; false; fi as ubuntu@52.91.87.75
+ DEBUG [b022762f] Command: if test ! -d /home/deploy/qrCodeGenerator/repo; then echo "Directory does not exist '/home/deploy/qrCodeGenerator/repo'" 1>&2; false; fi
+ DEBUG [b022762f] Finished in 0.280 seconds with exit status 0 (successful).
+ DEBUG [d99852f9] Running /usr/bin/env git rev-list --max-count=1 master as ubuntu@52.91.87.75
+ DEBUG [d99852f9] Command: cd /home/deploy/qrCodeGenerator/repo && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.7.0" GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-qrCodeGenerator-production-akhilesh.sh" ; /usr/bin/env git rev-list --max-count=1 master )
+ DEBUG [d99852f9] 	56f9c08f6cc912dda15e0f0b69d18c3bf3ee874f
+ DEBUG [d99852f9] Finished in 0.326 seconds with exit status 0 (successful).
+ DEBUG [5c44978f] Running if test ! -d /home/deploy/qrCodeGenerator/releases/20200812172920; then echo "Directory does not exist '/home/deploy/qrCodeGenerator/releases/20200812172920'" 1>&2; false; fi as ubuntu@52.91.87.75
+ DEBUG [5c44978f] Command: if test ! -d /home/deploy/qrCodeGenerator/releases/20200812172920; then echo "Directory does not exist '/home/deploy/qrCodeGenerator/releases/20200812172920'" 1>&2; false; fi
+ DEBUG [5c44978f] Finished in 0.282 seconds with exit status 0 (successful).
+  INFO [3f5d3812] Running /usr/bin/env echo "56f9c08f6cc912dda15e0f0b69d18c3bf3ee874f" > REVISION as ubuntu@52.91.87.75
+ DEBUG [3f5d3812] Command: cd /home/deploy/qrCodeGenerator/releases/20200812172920 && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.7.0" ; /usr/bin/env echo "56f9c08f6cc912dda15e0f0b69d18c3bf3ee874f" > REVISION )
+  INFO [3f5d3812] Finished in 0.326 seconds with exit status 0 (successful).
+  INFO [ac940820] Running /usr/bin/env mkdir -p /home/deploy/qrCodeGenerator/releases/20200812172920 /home/deploy/qrCodeGenerator/releases/20200812172920/tmp /home/deploy/qrCodeGenerator/releases/20200812172920/vendor /home/deploy/qrCodeGenerator/releases/20200812172920/public as ubuntu@52.91.87.75
+ DEBUG [ac940820] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.7.0" ; /usr/bin/env mkdir -p /home/deploy/qrCodeGenerator/releases/20200812172920 /home/deploy/qrCodeGenerator/releases/20200812172920/tmp /home/deploy/qrCodeGenerator/releases/20200812172920/vendor /home/deploy/qrCodeGenerator/releases/20200812172920/public )
+  INFO [ac940820] Finished in 0.283 seconds with exit status 0 (successful).
+ DEBUG [ada3aa39] Running [ -L /home/deploy/qrCodeGenerator/releases/20200812172920/log ] as ubuntu@52.91.87.75
+ DEBUG [ada3aa39] Command: [ -L /home/deploy/qrCodeGenerator/releases/20200812172920/log ]
+ DEBUG [ada3aa39] Finished in 0.324 seconds with exit status 1 (failed).
+ DEBUG [92494b6a] Running [ -d /home/deploy/qrCodeGenerator/releases/20200812172920/log ] as ubuntu@52.91.87.75
+ DEBUG [92494b6a] Command: [ -d /home/deploy/qrCodeGenerator/releases/20200812172920/log ]
+ DEBUG [92494b6a] Finished in 0.282 seconds with exit status 0 (successful).
+  INFO [1fcface6] Running /usr/bin/env rm -rf /home/deploy/qrCodeGenerator/releases/20200812172920/log as ubuntu@52.91.87.75
+ DEBUG [1fcface6] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.7.0" ; /usr/bin/env rm -rf /home/deploy/qrCodeGenerator/releases/20200812172920/log )
+  INFO [1fcface6] Finished in 0.326 seconds with exit status 0 (successful).
+  INFO [ece6ccbd] Running /usr/bin/env ln -s /home/deploy/qrCodeGenerator/shared/log /home/deploy/qrCodeGenerator/releases/20200812172920/log as ubuntu@52.91.87.75
+ DEBUG [ece6ccbd] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.7.0" ; /usr/bin/env ln -s /home/deploy/qrCodeGenerator/shared/log /home/deploy/qrCodeGenerator/releases/20200812172920/log )
+  INFO [ece6ccbd] Finished in 0.283 seconds with exit status 0 (successful).
+ DEBUG [ca9a4ad4] Running [ -L /home/deploy/qrCodeGenerator/releases/20200812172920/tmp/pids ] as ubuntu@52.91.87.75
+ DEBUG [ca9a4ad4] Command: [ -L /home/deploy/qrCodeGenerator/releases/20200812172920/tmp/pids ]
+ DEBUG [ca9a4ad4] Finished in 0.326 seconds with exit status 1 (failed).
+ DEBUG [1353c8d5] Running [ -d /home/deploy/qrCodeGenerator/releases/20200812172920/tmp/pids ] as ubuntu@52.91.87.75
+ DEBUG [1353c8d5] Command: [ -d /home/deploy/qrCodeGenerator/releases/20200812172920/tmp/pids ]
+ DEBUG [1353c8d5] Finished in 0.283 seconds with exit status 1 (failed).
+  INFO [05f261c5] Running /usr/bin/env ln -s /home/deploy/qrCodeGenerator/shared/tmp/pids /home/deploy/qrCodeGenerator/releases/20200812172920/tmp/pids as ubuntu@52.91.87.75
+ DEBUG [05f261c5] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.7.0" ; /usr/bin/env ln -s /home/deploy/qrCodeGenerator/shared/tmp/pids /home/deploy/qrCodeGenerator/releases/20200812172920/tmp/pids )
+  INFO [05f261c5] Finished in 0.325 seconds with exit status 0 (successful).
+ DEBUG [c539a429] Running [ -L /home/deploy/qrCodeGenerator/releases/20200812172920/tmp/cache ] as ubuntu@52.91.87.75
+ DEBUG [c539a429] Command: [ -L /home/deploy/qrCodeGenerator/releases/20200812172920/tmp/cache ]
+ DEBUG [c539a429] Finished in 0.281 seconds with exit status 1 (failed).
+ DEBUG [375f2b3f] Running [ -d /home/deploy/qrCodeGenerator/releases/20200812172920/tmp/cache ] as ubuntu@52.91.87.75
+ DEBUG [375f2b3f] Command: [ -d /home/deploy/qrCodeGenerator/releases/20200812172920/tmp/cache ]
+ DEBUG [375f2b3f] Finished in 0.323 seconds with exit status 0 (successful).
+  INFO [8b2d011e] Running /usr/bin/env rm -rf /home/deploy/qrCodeGenerator/releases/20200812172920/tmp/cache as ubuntu@52.91.87.75
+ DEBUG [8b2d011e] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.7.0" ; /usr/bin/env rm -rf /home/deploy/qrCodeGenerator/releases/20200812172920/tmp/cache )
+  INFO [8b2d011e] Finished in 0.312 seconds with exit status 0 (successful).
+  INFO [12391003] Running /usr/bin/env ln -s /home/deploy/qrCodeGenerator/shared/tmp/cache /home/deploy/qrCodeGenerator/releases/20200812172920/tmp/cache as ubuntu@52.91.87.75
+ DEBUG [12391003] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.7.0" ; /usr/bin/env ln -s /home/deploy/qrCodeGenerator/shared/tmp/cache /home/deploy/qrCodeGenerator/releases/20200812172920/tmp/cache )
+  INFO [12391003] Finished in 0.331 seconds with exit status 0 (successful).
+ DEBUG [563bdfb6] Running [ -L /home/deploy/qrCodeGenerator/releases/20200812172920/tmp/sockets ] as ubuntu@52.91.87.75
+ DEBUG [563bdfb6] Command: [ -L /home/deploy/qrCodeGenerator/releases/20200812172920/tmp/sockets ]
+ DEBUG [563bdfb6] Finished in 0.282 seconds with exit status 1 (failed).
+ DEBUG [d38a69d6] Running [ -d /home/deploy/qrCodeGenerator/releases/20200812172920/tmp/sockets ] as ubuntu@52.91.87.75
+ DEBUG [d38a69d6] Command: [ -d /home/deploy/qrCodeGenerator/releases/20200812172920/tmp/sockets ]
+ DEBUG [d38a69d6] Finished in 0.328 seconds with exit status 1 (failed).
+  INFO [8331fe15] Running /usr/bin/env ln -s /home/deploy/qrCodeGenerator/shared/tmp/sockets /home/deploy/qrCodeGenerator/releases/20200812172920/tmp/sockets as ubuntu@52.91.87.75
+ DEBUG [8331fe15] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.7.0" ; /usr/bin/env ln -s /home/deploy/qrCodeGenerator/shared/tmp/sockets /home/deploy/qrCodeGenerator/releases/20200812172920/tmp/sockets )
+  INFO [8331fe15] Finished in 0.284 seconds with exit status 0 (successful).
+ DEBUG [deec98d8] Running [ -L /home/deploy/qrCodeGenerator/releases/20200812172920/vendor/bundle ] as ubuntu@52.91.87.75
+ DEBUG [deec98d8] Command: [ -L /home/deploy/qrCodeGenerator/releases/20200812172920/vendor/bundle ]
+ DEBUG [deec98d8] Finished in 0.324 seconds with exit status 1 (failed).
+ DEBUG [b57a2f4a] Running [ -d /home/deploy/qrCodeGenerator/releases/20200812172920/vendor/bundle ] as ubuntu@52.91.87.75
+ DEBUG [b57a2f4a] Command: [ -d /home/deploy/qrCodeGenerator/releases/20200812172920/vendor/bundle ]
+ DEBUG [b57a2f4a] Finished in 0.283 seconds with exit status 0 (successful).
+  INFO [7fac704c] Running /usr/bin/env rm -rf /home/deploy/qrCodeGenerator/releases/20200812172920/vendor/bundle as ubuntu@52.91.87.75
+ DEBUG [7fac704c] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.7.0" ; /usr/bin/env rm -rf /home/deploy/qrCodeGenerator/releases/20200812172920/vendor/bundle )
+  INFO [7fac704c] Finished in 0.449 seconds with exit status 0 (successful).
+  INFO [8cbc9742] Running /usr/bin/env ln -s /home/deploy/qrCodeGenerator/shared/vendor/bundle /home/deploy/qrCodeGenerator/releases/20200812172920/vendor/bundle as ubuntu@52.91.87.75
+ DEBUG [8cbc9742] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.7.0" ; /usr/bin/env ln -s /home/deploy/qrCodeGenerator/shared/vendor/bundle /home/deploy/qrCodeGenerator/releases/20200812172920/vendor/bundle )
+  INFO [8cbc9742] Finished in 0.284 seconds with exit status 0 (successful).
+ DEBUG [6c2c71b5] Running [ -L /home/deploy/qrCodeGenerator/releases/20200812172920/.bundle ] as ubuntu@52.91.87.75
+ DEBUG [6c2c71b5] Command: [ -L /home/deploy/qrCodeGenerator/releases/20200812172920/.bundle ]
+ DEBUG [6c2c71b5] Finished in 0.323 seconds with exit status 1 (failed).
+ DEBUG [773554e4] Running [ -d /home/deploy/qrCodeGenerator/releases/20200812172920/.bundle ] as ubuntu@52.91.87.75
+ DEBUG [773554e4] Command: [ -d /home/deploy/qrCodeGenerator/releases/20200812172920/.bundle ]
+ DEBUG [773554e4] Finished in 0.283 seconds with exit status 1 (failed).
+  INFO [a3862188] Running /usr/bin/env ln -s /home/deploy/qrCodeGenerator/shared/.bundle /home/deploy/qrCodeGenerator/releases/20200812172920/.bundle as ubuntu@52.91.87.75
+ DEBUG [a3862188] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.7.0" ; /usr/bin/env ln -s /home/deploy/qrCodeGenerator/shared/.bundle /home/deploy/qrCodeGenerator/releases/20200812172920/.bundle )
+  INFO [a3862188] Finished in 0.325 seconds with exit status 0 (successful).
+ DEBUG [617958aa] Running [ -L /home/deploy/qrCodeGenerator/releases/20200812172920/public/system ] as ubuntu@52.91.87.75
+ DEBUG [617958aa] Command: [ -L /home/deploy/qrCodeGenerator/releases/20200812172920/public/system ]
+ DEBUG [617958aa] Finished in 0.288 seconds with exit status 1 (failed).
+ DEBUG [659bc07a] Running [ -d /home/deploy/qrCodeGenerator/releases/20200812172920/public/system ] as ubuntu@52.91.87.75
+ DEBUG [659bc07a] Command: [ -d /home/deploy/qrCodeGenerator/releases/20200812172920/public/system ]
+ DEBUG [659bc07a] Finished in 0.326 seconds with exit status 1 (failed).
+  INFO [13282409] Running /usr/bin/env ln -s /home/deploy/qrCodeGenerator/shared/public/system /home/deploy/qrCodeGenerator/releases/20200812172920/public/system as ubuntu@52.91.87.75
+ DEBUG [13282409] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.7.0" ; /usr/bin/env ln -s /home/deploy/qrCodeGenerator/shared/public/system /home/deploy/qrCodeGenerator/releases/20200812172920/public/system )
+  INFO [13282409] Finished in 0.283 seconds with exit status 0 (successful).
+ DEBUG [adcfe107] Running [ -L /home/deploy/qrCodeGenerator/releases/20200812172920/public/uploads ] as ubuntu@52.91.87.75
+ DEBUG [adcfe107] Command: [ -L /home/deploy/qrCodeGenerator/releases/20200812172920/public/uploads ]
+ DEBUG [adcfe107] Finished in 0.326 seconds with exit status 1 (failed).
+ DEBUG [4df33d78] Running [ -d /home/deploy/qrCodeGenerator/releases/20200812172920/public/uploads ] as ubuntu@52.91.87.75
+ DEBUG [4df33d78] Command: [ -d /home/deploy/qrCodeGenerator/releases/20200812172920/public/uploads ]
+ DEBUG [4df33d78] Finished in 0.283 seconds with exit status 1 (failed).
+  INFO [6aacc114] Running /usr/bin/env ln -s /home/deploy/qrCodeGenerator/shared/public/uploads /home/deploy/qrCodeGenerator/releases/20200812172920/public/uploads as ubuntu@52.91.87.75
+ DEBUG [6aacc114] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.7.0" ; /usr/bin/env ln -s /home/deploy/qrCodeGenerator/shared/public/uploads /home/deploy/qrCodeGenerator/releases/20200812172920/public/uploads )
+  INFO [6aacc114] Finished in 0.326 seconds with exit status 0 (successful).
+ DEBUG [94f2be62] Running [ -L /home/deploy/qrCodeGenerator/releases/20200812172920/public/assets ] as ubuntu@52.91.87.75
+ DEBUG [94f2be62] Command: [ -L /home/deploy/qrCodeGenerator/releases/20200812172920/public/assets ]
+ DEBUG [94f2be62] Finished in 0.286 seconds with exit status 1 (failed).
+ DEBUG [6e4b0fa9] Running [ -d /home/deploy/qrCodeGenerator/releases/20200812172920/public/assets ] as ubuntu@52.91.87.75
+ DEBUG [6e4b0fa9] Command: [ -d /home/deploy/qrCodeGenerator/releases/20200812172920/public/assets ]
+ DEBUG [6e4b0fa9] Finished in 0.323 seconds with exit status 1 (failed).
+  INFO [eeb6bef0] Running /usr/bin/env ln -s /home/deploy/qrCodeGenerator/shared/public/assets /home/deploy/qrCodeGenerator/releases/20200812172920/public/assets as ubuntu@52.91.87.75
+ DEBUG [eeb6bef0] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.7.0" ; /usr/bin/env ln -s /home/deploy/qrCodeGenerator/shared/public/assets /home/deploy/qrCodeGenerator/releases/20200812172920/public/assets )
+  INFO [eeb6bef0] Finished in 0.283 seconds with exit status 0 (successful).
+ DEBUG [7ee51aa9] Running if test ! -d /home/deploy/qrCodeGenerator/releases/20200812172920; then echo "Directory does not exist '/home/deploy/qrCodeGenerator/releases/20200812172920'" 1>&2; false; fi as ubuntu@52.91.87.75
+ DEBUG [7ee51aa9] Command: if test ! -d /home/deploy/qrCodeGenerator/releases/20200812172920; then echo "Directory does not exist '/home/deploy/qrCodeGenerator/releases/20200812172920'" 1>&2; false; fi
+ DEBUG [7ee51aa9] Finished in 0.324 seconds with exit status 0 (successful).
+  INFO [cf5788f5] Running $HOME/.rbenv/bin/rbenv exec bundle config --local deployment true as ubuntu@52.91.87.75
+ DEBUG [cf5788f5] Command: cd /home/deploy/qrCodeGenerator/releases/20200812172920 && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.7.0" ; $HOME/.rbenv/bin/rbenv exec bundle config --local deployment true )
+  INFO [cf5788f5] Finished in 0.479 seconds with exit status 0 (successful).
+  INFO [be94fdd0] Running $HOME/.rbenv/bin/rbenv exec bundle config --local path /home/deploy/qrCodeGenerator/shared/bundle as ubuntu@52.91.87.75
+ DEBUG [be94fdd0] Command: cd /home/deploy/qrCodeGenerator/releases/20200812172920 && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.7.0" ; $HOME/.rbenv/bin/rbenv exec bundle config --local path /home/deploy/qrCodeGenerator/shared/bundle )
+  INFO [be94fdd0] Finished in 0.528 seconds with exit status 0 (successful).
+  INFO [18704f92] Running $HOME/.rbenv/bin/rbenv exec bundle config --local without development:test as ubuntu@52.91.87.75
+ DEBUG [18704f92] Command: cd /home/deploy/qrCodeGenerator/releases/20200812172920 && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.7.0" ; $HOME/.rbenv/bin/rbenv exec bundle config --local without development:test )
+  INFO [18704f92] Finished in 0.480 seconds with exit status 0 (successful).
+ DEBUG [10a53497] Running if test ! -d /home/deploy/qrCodeGenerator/releases/20200812172920; then echo "Directory does not exist '/home/deploy/qrCodeGenerator/releases/20200812172920'" 1>&2; false; fi as ubuntu@52.91.87.75
+ DEBUG [10a53497] Command: if test ! -d /home/deploy/qrCodeGenerator/releases/20200812172920; then echo "Directory does not exist '/home/deploy/qrCodeGenerator/releases/20200812172920'" 1>&2; false; fi
+ DEBUG [10a53497] Finished in 0.323 seconds with exit status 0 (successful).
+ DEBUG [8d25bb1b] Running $HOME/.rbenv/bin/rbenv exec bundle check as ubuntu@52.91.87.75
+ DEBUG [8d25bb1b] Command: cd /home/deploy/qrCodeGenerator/releases/20200812172920 && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.7.0" ; $HOME/.rbenv/bin/rbenv exec bundle check )
+ DEBUG [8d25bb1b] 	The dependency tzinfo-data (>= 0) will be unused by any of the platforms Bundler is installing for. Bundler is installing for ruby but the dependency is only for x86-mingw32, x86-mswin32, x64-mingw32, java. To add those platforms to the bundle, run `bundle lock --add-platform x86-mingw32 x86-mswin32 x64-mingw32 java`.
+ DEBUG [8d25bb1b] 	The Gemfile's dependencies are satisfied
+ DEBUG [8d25bb1b] Finished in 0.569 seconds with exit status 0 (successful).
+  INFO The Gemfile's dependencies are satisfied, skipping installation
+ DEBUG [2a4b7e58] Running if test ! -d /home/deploy/qrCodeGenerator/releases/20200812172920; then echo "Directory does not exist '/home/deploy/qrCodeGenerator/releases/20200812172920'" 1>&2; false; fi as ubuntu@52.91.87.75
+ DEBUG [2a4b7e58] Command: if test ! -d /home/deploy/qrCodeGenerator/releases/20200812172920; then echo "Directory does not exist '/home/deploy/qrCodeGenerator/releases/20200812172920'" 1>&2; false; fi
+ DEBUG [2a4b7e58] Finished in 0.321 seconds with exit status 0 (successful).
+  INFO [05983dc1] Running $HOME/.rbenv/bin/rbenv exec bundle exec rake assets:precompile as ubuntu@52.91.87.75
+ DEBUG [05983dc1] Command: cd /home/deploy/qrCodeGenerator/releases/20200812172920 && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.7.0" RAILS_ENV="production" RAILS_GROUPS="" ; $HOME/.rbenv/bin/rbenv exec bundle exec rake assets:precompile )
+ DEBUG [05983dc1] 	/home/deploy/qrCodeGenerator/shared/bundle/ruby/2.7.0/gems/rake-11.3.0/lib/rake/application.rb:378: warning: deprecated Object#=~ is called on Proc; it always returns nil
+ DEBUG [05983dc1] 	/home/deploy/qrCodeGenerator/shared/bundle/ruby/2.7.0/gems/rake-11.3.0/lib/rake/application.rb:378: warning: deprecated Object#=~ is called on Proc; it always returns nil
+ DEBUG [05983dc1] 	/home/deploy/qrCodeGenerator/shared/bundle/ruby/2.7.0/gems/rake-11.3.0/lib/rake/application.rb:378: warning: deprecated Object#=~ is called on Proc; it always returns nil
+ DEBUG [05983dc1] 	/home/deploy/qrCodeGenerator/shared/bundle/ruby/2.7.0/gems/rake-11.3.0/lib/rake/application.rb:378: warning: deprecated Object#=~ is called on Proc; it always returns nil
+ DEBUG [05983dc1] 	/home/deploy/qrCodeGenerator/shared/bundle/ruby/2.7.0/gems/rake-11.3.0/lib/rake/application.rb:378: warning: deprecated Object#=~ is called on Proc; it always returns nil
+ DEBUG [05983dc1] 	/home/deploy/qrCodeGenerator/shared/bundle/ruby/2.7.0/gems/rake-11.3.0/lib/rake/application.rb:378: warning: deprecated Object#=~ is called on Proc; it always returns nil
+ DEBUG [05983dc1] 	/home/deploy/qrCodeGenerator/shared/bundle/ruby/2.7.0/gems/rake-11.3.0/lib/rake/application.rb:378: warning: deprecated Object#=~ is called on Proc; it always returns nil
+ DEBUG [05983dc1] 	/home/deploy/qrCodeGenerator/shared/bundle/ruby/2.7.0/gems/rake-11.3.0/lib/rake/application.rb:378: warning: deprecated Object#=~ is called on Proc; it always returns nil
+ DEBUG [05983dc1] 	/home/deploy/qrCodeGenerator/shared/bundle/ruby/2.7.0/gems/rake-11.3.0/lib/rake/application.rb:378: warning: deprecated Object#=~ is called on Proc; it always returns nil
+ DEBUG [05983dc1] 	/home/deploy/qrCodeGenerator/shared/bundle/ruby/2.7.0/gems/rake-11.3.0/lib/rake/application.rb:378: warning: deprecated Object#=~ is called on Proc; it always returns nil
+ DEBUG [05983dc1] 	/home/deploy/qrCodeGenerator/shared/bundle/ruby/2.7.0/gems/rake-11.3.0/lib/rake/application.rb:378: warning: deprecated Object#=~ is called on Proc; it always returns nil
+ DEBUG [05983dc1] 	/home/deploy/qrCodeGenerator/shared/bundle/ruby/2.7.0/gems/rake-11.3.0/lib/rake/application.rb:378: warning: deprecated Object#=~ is called on Proc; it always returns nil
+ DEBUG [05983dc1] 	/home/deploy/qrCodeGenerator/shared/bundle/ruby/2.7.0/gems/rake-11.3.0/lib/rake/application.rb:378: warning: deprecated Object#=~ is called on Proc; it always returns nil
+ DEBUG [05983dc1] 	/home/deploy/qrCodeGenerator/shared/bundle/ruby/2.7.0/gems/rake-11.3.0/lib/rake/application.rb:378: warning: deprecated Object#=~ is called on Proc; it always returns nil
+ DEBUG [05983dc1] 	/home/deploy/qrCodeGenerator/shared/bundle/ruby/2.7.0/gems/rake-11.3.0/lib/rake/application.rb:378: warning: deprecated Object#=~ is called on Proc; it always returns nil
+ DEBUG [05983dc1] 	/home/deploy/qrCodeGenerator/shared/bundle/ruby/2.7.0/gems/rake-11.3.0/lib/rake/application.rb:378: warning: deprecated Object#=~ is called on Proc; it always returns nil
+ DEBUG [05983dc1] 	/home/deploy/qrCodeGenerator/shared/bundle/ruby/2.7.0/gems/rake-11.3.0/lib/rake/application.rb:378: warning: deprecated Object#=~ is called on Proc; it always returns nil
+ DEBUG [05983dc1] 	/home/deploy/qrCodeGenerator/shared/bundle/ruby/2.7.0/gems/rake-11.3.0/lib/rake/application.rb:378: warning: deprecated Object#=~ is called on Proc; it always returns nil
+ DEBUG [05983dc1] 	/home/deploy/qrCodeGenerator/shared/bundle/ruby/2.7.0/gems/rake-11.3.0/lib/rake/application.rb:378: warning: deprecated Object#=~ is called on Proc; it always returns nil
+ DEBUG [05983dc1] 	/home/deploy/qrCodeGenerator/shared/bundle/ruby/2.7.0/gems/rake-11.3.0/lib/rake/application.rb:378: warning: deprecated Object#=~ is called on Proc; it always returns nil
+ DEBUG [05983dc1] 	/home/deploy/qrCodeGenerator/shared/bundle/ruby/2.7.0/gems/rake-11.3.0/lib/rake/application.rb:378: warning: deprecated Object#=~ is called on Proc; it always returns nil
+ DEBUG [05983dc1] 	/home/deploy/qrCodeGenerator/shared/bundle/ruby/2.7.0/gems/rake-11.3.0/lib/rake/application.rb:378: warning: deprecated Object#=~ is called on Proc; it always returns nil
+ DEBUG [05983dc1] 	/home/deploy/qrCodeGenerator/shared/bundle/ruby/2.7.0/gems/rake-11.3.0/lib/rake/application.rb:378: warning: deprecated Object#=~ is called on Proc; it always returns nil
+ DEBUG [05983dc1] 	/home/deploy/qrCodeGenerator/shared/bundle/ruby/2.7.0/gems/rake-11.3.0/lib/rake/application.rb:378: warning: deprecated Object#=~ is called on Proc; it always returns nil
+ DEBUG [05983dc1] 	/home/deploy/qrCodeGenerator/shared/bundle/ruby/2.7.0/gems/rake-11.3.0/lib/rake/application.rb:378: warning: deprecated Object#=~ is called on Proc; it always returns nil
+ DEBUG [05983dc1] 	/home/deploy/qrCodeGenerator/shared/bundle/ruby/2.7.0/gems/rake-11.3.0/lib/rake/application.rb:378: warning: deprecated Object#=~ is called on Proc; it always returns nil
+ DEBUG [05983dc1] 	/home/deploy/qrCodeGenerator/shared/bundle/ruby/2.7.0/gems/rake-11.3.0/lib/rake/application.rb:378: warning: deprecated Object#=~ is called on Proc; it always returns nil
+ DEBUG [05983dc1] 	/home/deploy/qrCodeGenerator/shared/bundle/ruby/2.7.0/gems/rake-11.3.0/lib/rake/application.rb:378: warning: deprecated Object#=~ is called on Proc; it always returns nil
+ DEBUG [05983dc1] 	/home/deploy/qrCodeGenerator/shared/bundle/ruby/2.7.0/gems/rake-11.3.0/lib/rake/application.rb:378: warning: deprecated Object#=~ is called on Proc; it always returns nil
+ DEBUG [05983dc1] 	/home/deploy/qrCodeGenerator/shared/bundle/ruby/2.7.0/gems/rake-11.3.0/lib/rake/application.rb:378: warning: deprecated Object#=~ is called on Proc; it always returns nil
+ DEBUG [05983dc1] 	rake aborted!
+ DEBUG [05983dc1] 	Don't know how to build task 'assets:precompile' (see --tasks)
+ DEBUG [05983dc1] 	/home/deploy/qrCodeGenerator/shared/bundle/ruby/2.7.0/gems/rake-11.3.0/exe/rake:27:in `<top (required)>'
+/home/ubuntu/.rbenv/versions/2.7.0/bin/bundle:23:in `load'
+/home/ubuntu/.rbenv/versions/2.7.0/bin/bundle:23:in `<main>'
+ DEBUG [05983dc1] 	(See full trace by running task with --trace)
