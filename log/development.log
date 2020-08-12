@@ -1,0 +1,190 @@
+Started GET "/" for ::1 at 2020-08-10 12:03:11 +0100
+Processing by Rails::WelcomeController#index as HTML
+  Rendering vendor/bundle/ruby/2.7.0/gems/railties-6.0.3.2/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered vendor/bundle/ruby/2.7.0/gems/railties-6.0.3.2/lib/rails/templates/rails/welcome/index.html.erb (Duration: 7.3ms | Allocations: 408)
+Completed 200 OK in 19ms (Views: 13.5ms | Allocations: 2205)
+
+
+DEPRECATION WARNING: Using `bin/rake routes` is deprecated and will be removed in Rails 6.1. Use `bin/rails routes` instead.
+ (called from load at /Users/akhilesh/Downloads/Cloud_application_services/Service_application/qrCodeGenerator/vendor/bundle/ruby/2.7.0/bin/rake:23)
+Started POST "/qrcode" for ::1 at 2020-08-10 15:20:04 +0100
+Processing by GeneratorController#qrcode as */*
+  Parameters: {"data"=>{"message"=>"Hello"}, "generator"=>{"data"=>{"message"=>"Hello"}}}
+Completed 500 Internal Server Error in 1ms (Allocations: 1112)
+
+
+  
+NoMethodError (undefined method `parse' for String:Class
+Did you mean?  parent):
+  
+lib/code_generate.rb:6:in `initialize'
+app/controllers/generator_controller.rb:9:in `new'
+app/controllers/generator_controller.rb:9:in `generated_code'
+app/controllers/generator_controller.rb:16:in `resp_body'
+app/controllers/generator_controller.rb:5:in `qrcode'
+Started POST "/qrcode" for ::1 at 2020-08-10 15:22:01 +0100
+Processing by GeneratorController#qrcode as */*
+  Parameters: {"data"=>{"message"=>"Hello"}, "generator"=>{"data"=>{"message"=>"Hello"}}}
+Completed 200 OK in 0ms (Views: 0.2ms | Allocations: 263)
+
+
+Started POST "/qrcode" for ::1 at 2020-08-10 16:36:54 +0100
+Processing by GeneratorController#qrcode as */*
+  Parameters: {"data"=>{"message"=>"Hello "}, "generator"=>{"data"=>{"message"=>"Hello "}}}
+Completed 200 OK in 69ms (Views: 0.6ms | Allocations: 13344)
+
+
+Started POST "/qrcode" for ::1 at 2020-08-10 16:39:33 +0100
+Processing by GeneratorController#qrcode as */*
+  Parameters: {"data"=>{"message"=>"Hello "}, "generator"=>{"data"=>{"message"=>"Hello "}}}
+Completed 500 Internal Server Error in 20ms (Allocations: 13150)
+
+
+  
+NameError (undefined local variable or method `qr' for #<Qrcodegenerator:0x00007fae82e5cf30 @message="Hello ">):
+  
+lib/code_generate.rb:26:in `get_code!'
+app/controllers/generator_controller.rb:9:in `generated_code'
+app/controllers/generator_controller.rb:16:in `resp_body'
+app/controllers/generator_controller.rb:5:in `qrcode'
+Started POST "/qrcode" for ::1 at 2020-08-10 16:39:57 +0100
+Processing by GeneratorController#qrcode as */*
+  Parameters: {"data"=>{"message"=>"Hello "}, "generator"=>{"data"=>{"message"=>"Hello "}}}
+Completed 200 OK in 25ms (Views: 0.3ms | Allocations: 13340)
+
+
+Started POST "/qrcode" for ::1 at 2020-08-10 16:44:03 +0100
+Processing by GeneratorController#qrcode as */*
+  Parameters: {"data"=>{"message"=>"Hello "}, "generator"=>{"data"=>{"message"=>"Hello "}}}
+Completed 200 OK in 25ms (Views: 0.2ms | Allocations: 13340)
+
+
+Started POST "/qrcode" for ::1 at 2020-08-10 16:44:40 +0100
+Processing by GeneratorController#qrcode as */*
+  Parameters: {"data"=>{"message"=>"Hola "}, "generator"=>{"data"=>{"message"=>"Hola "}}}
+Completed 200 OK in 20ms (Views: 0.2ms | Allocations: 12774)
+
+
+Started POST "/qrcode" for ::1 at 2020-08-10 17:23:54 +0100
+Processing by GeneratorController#qrcode as */*
+  Parameters: {"data"=>{"message"=>"Hola "}, "generator"=>{"data"=>{"message"=>"Hola "}}}
+Completed 500 Internal Server Error in 21ms (Allocations: 11878)
+
+
+  
+TypeError (no implicit conversion of ChunkyPNG::Image into String):
+  
+lib/code_generate.rb:28:in `join'
+lib/code_generate.rb:28:in `get_code!'
+app/controllers/generator_controller.rb:9:in `generated_code'
+app/controllers/generator_controller.rb:16:in `resp_body'
+app/controllers/generator_controller.rb:5:in `qrcode'
+Started POST "/qrcode" for ::1 at 2020-08-10 17:27:08 +0100
+Processing by GeneratorController#qrcode as */*
+  Parameters: {"data"=>{"message"=>"Hola "}, "generator"=>{"data"=>{"message"=>"Hola "}}}
+Completed 500 Internal Server Error in 16ms (Allocations: 11830)
+
+
+  
+TypeError (no implicit conversion of ChunkyPNG::Image into String):
+  
+lib/code_generate.rb:28:in `join'
+lib/code_generate.rb:28:in `get_code!'
+app/controllers/generator_controller.rb:9:in `generated_code'
+app/controllers/generator_controller.rb:16:in `resp_body'
+app/controllers/generator_controller.rb:5:in `qrcode'
+Started POST "/qrcode" for ::1 at 2020-08-10 17:28:05 +0100
+Processing by GeneratorController#qrcode as */*
+  Parameters: {"data"=>{"message"=>"Hola "}, "generator"=>{"data"=>{"message"=>"Hola "}}}
+Completed 500 Internal Server Error in 18ms (Allocations: 11830)
+
+
+  
+TypeError (no implicit conversion of ChunkyPNG::Image into String):
+  
+lib/code_generate.rb:28:in `join'
+lib/code_generate.rb:28:in `get_code!'
+app/controllers/generator_controller.rb:9:in `generated_code'
+app/controllers/generator_controller.rb:16:in `resp_body'
+app/controllers/generator_controller.rb:5:in `qrcode'
+Started POST "/qrcode" for ::1 at 2020-08-10 17:28:30 +0100
+Processing by GeneratorController#qrcode as */*
+  Parameters: {"data"=>{"message"=>"Hola "}, "generator"=>{"data"=>{"message"=>"Hola "}}}
+Completed 200 OK in 26ms (Views: 0.2ms | Allocations: 13028)
+
+
+Started POST "/qrcode" for ::1 at 2020-08-10 18:14:50 +0100
+  
+SyntaxError (/Users/akhilesh/Downloads/Cloud_application_services/Service_application/qrCodeGenerator/app/controllers/generator_controller.rb:15: syntax error, unexpected ',', expecting '}'
+      ,
+      ^
+/Users/akhilesh/Downloads/Cloud_application_services/Service_application/qrCodeGenerator/app/controllers/generator_controller.rb:24: syntax error, unexpected end-of-input, expecting `end'):
+  
+app/controllers/generator_controller.rb:15: syntax error, unexpected ',', expecting '}'
+app/controllers/generator_controller.rb:24: syntax error, unexpected end-of-input, expecting `end'
+app/controllers/generator_controller.rb:15: syntax error, unexpected ',', expecting '}'
+app/controllers/generator_controller.rb:24: syntax error, unexpected end-of-input, expecting `end'
+Started POST "/qrcode" for ::1 at 2020-08-10 18:15:52 +0100
+Processing by GeneratorController#qrcode as */*
+  Parameters: {"data"=>{"message"=>"Hola "}, "generator"=>{"data"=>{"message"=>"Hola "}}}
+Completed 200 OK in 33ms (Views: 0.2ms | Allocations: 12980)
+
+
+Started POST "/qrcode" for ::1 at 2020-08-10 18:18:05 +0100
+Processing by GeneratorController#qrcode as */*
+  Parameters: {"data"=>{"message"=>"Hola "}, "generator"=>{"data"=>{"message"=>"Hola "}}}
+Completed 500 Internal Server Error in 39ms (Allocations: 13042)
+
+
+  
+Encoding::UndefinedConversionError ("\x89" from ASCII-8BIT to UTF-8):
+  
+app/controllers/generator_controller.rb:5:in `qrcode'
+Started POST "/qrcode" for ::1 at 2020-08-10 18:18:40 +0100
+Processing by GeneratorController#qrcode as */*
+  Parameters: {"data"=>{"message"=>"Hola "}, "generator"=>{"data"=>{"message"=>"Hola "}}}
+Completed 200 OK in 28ms (Views: 6.9ms | Allocations: 26318)
+
+
+Started POST "/qrcode" for ::1 at 2020-08-10 18:21:36 +0100
+Processing by GeneratorController#qrcode as */*
+  Parameters: {"data"=>{"message"=>"Hola "}, "generator"=>{"data"=>{"message"=>"Hola "}}}
+Completed 200 OK in 20ms (Views: 0.8ms | Allocations: 12341)
+
+
+Started POST "/qrcode" for ::1 at 2020-08-10 18:28:31 +0100
+Processing by GeneratorController#qrcode as */*
+  Parameters: {"data"=>{"message"=>"Hola "}, "generator"=>{"data"=>{"message"=>"Hola "}}}
+Completed 200 OK in 15ms (Views: 0.7ms | Allocations: 12275)
+
+
+Started POST "/qrcode" for ::1 at 2020-08-10 18:29:10 +0100
+Processing by GeneratorController#qrcode as */*
+  Parameters: {"data"=>{"message"=>"Hola "}, "generator"=>{"data"=>{"message"=>"Hola "}}}
+Completed 200 OK in 20ms (Views: 0.7ms | Allocations: 12341)
+
+
+Started POST "/qrcode" for ::1 at 2020-08-10 18:36:33 +0100
+Processing by GeneratorController#qrcode as */*
+  Parameters: {"data"=>{"message"=>"Hola "}, "generator"=>{"data"=>{"message"=>"Hola "}}}
+Completed 200 OK in 14ms (Views: 0.8ms | Allocations: 12275)
+
+
+Started POST "/qrcode" for ::1 at 2020-08-10 18:45:49 +0100
+Processing by GeneratorController#qrcode as */*
+  Parameters: {"data"=>{"message"=>"Hola "}, "generator"=>{"data"=>{"message"=>"Hola "}}}
+Completed 200 OK in 17ms (Views: 0.6ms | Allocations: 12276)
+
+
+Started POST "/qrcode" for ::1 at 2020-08-10 22:59:57 +0100
+Processing by GeneratorController#qrcode as */*
+  Parameters: {"data"=>{"message"=>"Hola "}, "generator"=>{"data"=>{"message"=>"Hola "}}}
+Completed 200 OK in 20ms (Views: 0.7ms | Allocations: 12341)
+
+
+Started POST "/qrcode" for ::1 at 2020-08-10 23:00:12 +0100
+Processing by GeneratorController#qrcode as */*
+  Parameters: {"data"=>{"message"=>"Hola "}, "generator"=>{"data"=>{"message"=>"Hola "}}}
+Completed 200 OK in 15ms (Views: 0.7ms | Allocations: 12275)
+
+

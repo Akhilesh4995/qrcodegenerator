@@ -1,0 +1,5 @@
+require "rambo_helper"
+
+RSpec.describe "e-BookMobile API", type: :request do
+
+end

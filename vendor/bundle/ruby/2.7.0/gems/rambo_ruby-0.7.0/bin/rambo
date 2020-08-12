@@ -1,0 +1,26 @@
+#!/usr/bin/env ruby
+
+lib = File.expand_path("../../lib", __FILE__)
+$LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
+
+require "fileutils"
+require "cli"
+require "optparse"
+
+filename = ARGV[0] ? File.expand_path(ARGV[0], FileUtils.pwd) : nil
+
+options = {}
+
+OptionParser.new do |opts|
+  opts.banner = "Usage: rambo [FILE] [OPTIONS]"
+
+  options[:framework] = :rails
+  opts.on("--framework=FRAMEWORK", "Choose rails (default), sinatra:classic, sinatra:modular, or grape") do |v|
+    options[:framework] = v.to_sym
+  end
+  opts.on("--token=TOKEN", "-T=TOKEN", "Specify an API token") do |v|
+    options[:token] = v
+  end
+end.parse!
+
+Rambo::CLI.new(filename, options, STDOUT).run!
