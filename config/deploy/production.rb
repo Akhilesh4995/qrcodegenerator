@@ -7,7 +7,10 @@
 # server "example.com", user: "deploy", roles: %w{app web}, other_property: :other_value
 # server "db.example.com", user: "deploy", roles: %w{db}
 
-server '52.91.87.75' user: 'ubuntu', roles: %w{app db web}
+role :app, %w{ubuntu@52.91.87.75}
+role :web, %w{ubuntu@52.91.87.75}
+role :db,  %w{ubuntu@52.91.87.75}
+
 
 set :ssh_options, {
 	keys: %w(/Users/akhilesh/Downloads/serviceapi.pem),
